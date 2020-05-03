@@ -4,8 +4,8 @@ kind: Deployment
 metadata:
   name: podinfo
   annotations:
-      flux.weave.works/tag.podinfo: glob:*
-      flux.weave.works/automated: 'true'
+    flux.weave.works/tag.podinfo: glob:*
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 4
   template:
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: quay.io/stefanprodan/podinfo:3.0.0
+        image: quay.io/stefanprodan/podinfo:3.2.3
         ports:
         - containerPort: 3000
